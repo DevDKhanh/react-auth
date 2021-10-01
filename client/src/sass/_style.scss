@@ -1,0 +1,156 @@
+@import './variables';
+@import './mixin';
+
+.btn + .btn {
+	margin-left: 0.5rem;
+}
+
+.btn {
+	font-family: Arial, Helvetica, sans-serif;
+	display: inline-block;
+	text-align: center;
+	font-weight: 600;
+	border: 0;
+	width: auto;
+	cursor: pointer;
+	outline: none;
+	font-size: 1rem;
+	border-radius: 0.3rem;
+	padding: 0.5rem 1rem;
+
+	&--md {
+		padding: 0.6rem 1.3rem;
+		font-size: 1.1rem;
+	}
+
+	&--xl {
+		padding: 0.7rem 1.5rem;
+		font-size: 1.4rem;
+	}
+
+	&--circle {
+		border-radius: 2rem;
+	}
+
+	&:hover {
+		opacity: 0.8;
+	}
+
+	&--primary {
+		@include btnStyle(#fff, $color-primary);
+	}
+
+	&--secondary {
+		@include btnStyle(#fff, $color-secondary);
+	}
+
+	&--danger {
+		@include btnStyle(#fff, $color-danger);
+	}
+
+	&--warning {
+		@include btnStyle(#fff, $color-warning);
+	}
+
+	&--success {
+		@include btnStyle(#fff, $color-success);
+	}
+
+	&--dark {
+		@include btnStyle(#fff, $color-dark);
+	}
+
+	&--light {
+		@include btnStyle(#000, $color-light);
+	}
+
+	&--pink {
+		@include btnStyle(#fff, $color-pink);
+	}
+
+	&--orange {
+		@include btnStyle(#fff, $color-orange);
+	}
+}
+
+.text {
+	//Color
+	&--primary {
+		color: $color-primary;
+	}
+
+	&--secondary {
+		color: $color-secondary;
+	}
+
+	&--danger {
+		color: $color-danger;
+	}
+
+	&--warning {
+		color: $color-warning;
+	}
+
+	&--success {
+		color: $color-success;
+	}
+
+	&--dark {
+		color: $color-dark;
+	}
+
+	&--light {
+		color: $color-light;
+	}
+
+	&--pink {
+		color: $color-pink;
+	}
+
+	&--orange {
+		color: $color-orange;
+	}
+
+	//Align
+	&--center {
+		text-align: center;
+	}
+}
+
+.bg {
+	&--primary {
+		background-color: $color-primary;
+	}
+
+	&--secondary {
+		background-color: $color-secondary;
+	}
+
+	&--danger {
+		background-color: $color-danger;
+	}
+
+	&--warning {
+		background-color: $color-warning;
+	}
+
+	&--success {
+		background-color: $color-success;
+	}
+
+	&--dark {
+		background-color: $color-dark;
+	}
+
+	&--light {
+		background-color: $color-light;
+	}
+
+	&--pink {
+		background-color: $color-pink;
+	}
+
+	&--orange {
+		background-color: $color-orange;
+	}
+}

@@ -1,0 +1,66 @@
+@import './variables';
+@import './mixin';
+
+header {
+	background-color: $color-dark;
+}
+
+.header {
+	font-family: Arial, Helvetica, sans-serif;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0;
+	height: $height-header;
+
+	&-logo {
+		font-size: 1.5rem;
+		font-weight: 600;
+
+		a {
+			color: #fff;
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+
+		a.active {
+			color: $color-pink;
+			text-shadow: 0 0 0.5rem $color-pink;
+		}
+	}
+
+	&-menu {
+		flex: 1;
+		margin-left: 5rem;
+	}
+}
+
+.menu {
+	list-style: none;
+	display: flex;
+
+	&-item + &-item {
+		margin-left: 1rem;
+	}
+
+	&-link {
+		font-size: 1.1rem;
+		color: #fff;
+	}
+
+	&-link.active {
+		position: relative;
+		color: $color-pink;
+
+		&::after {
+			position: absolute;
+			content: '';
+			width: 100%;
+			height: 2px;
+			background-color: $color-pink;
+			bottom: -5px;
+			left: 0;
+		}
+	}
+}

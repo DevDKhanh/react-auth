@@ -1,0 +1,52 @@
+@import './variables';
+html {
+	box-sizing: border-box;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+input,
+textarea,
+select,
+button {
+	outline: none;
+}
+input {
+	line-height: normal;
+}
+label,
+button {
+	cursor: pointer;
+}
+a {
+	text-decoration: none;
+}
+img {
+	display: block;
+	max-width: 100%;
+}
+
+.wide {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.main-page {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: calc(#{100vh} - #{$height-header});
+
+	h1 {
+		font-size: 4rem;
+		font-weight: 600;
+		font-family: Arial, Helvetica, sans-serif;
+		color: rgb(118, 0, 187);
+	}
+}
